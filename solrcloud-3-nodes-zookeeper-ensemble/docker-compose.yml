@@ -40,7 +40,7 @@ services:
             ZOO_LOG_DIR: /opt/persist/logs
             ZOO_DATA_LOG_DIR: /opt/persist/data
     solr-1:
-        image: solr
+        image: solr:5
         restart: always
         ports:
             - 8081:8081
@@ -61,7 +61,7 @@ services:
           - zoo-2
           - zoo-3
     solr-2:
-        image: solr
+        image: solr:5
         restart: always
         ports:
             - 8082:8082
@@ -82,7 +82,7 @@ services:
           - zoo-2
           - zoo-3
     solr-3:
-        image: solr
+        image: solr:5
         restart: always
         ports:
             - 8083:8083
